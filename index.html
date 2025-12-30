@@ -6,32 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Resume</title>
     <style>
-        /* Removes all default spacing and grey borders */
-        body, html {
+        /* This removes the white/grey gap around the edges */
+        * {
             margin: 0;
             padding: 0;
-            height: 100%;
-            width: 100%;
-            overflow: hidden; /* Prevents double scrollbars */
-            background-color: white;
+            box-sizing: border-box;
         }
-
-        /* Makes the PDF fill the entire screen */
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Stops the browser from showing a second scrollbar */
+            background-color: #323639; /* Matches the dark grey of the PDF viewer for a seamless look */
+        }
         iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
             border: none;
+            display: block;
         }
     </style>
 </head>
 <body>
 
-    <iframe src="Resume.pdf#view=FitH" frameborder="0">
-        <p>Your browser does not support PDFs. <a href="Resume.pdf">Download instead</a>.</p>
-    </iframe>
+    <iframe src="Resume.pdf#view=FitH&toolbar=0" frameborder="0"></iframe>
 
 </body>
 </html>
