@@ -2,27 +2,36 @@
 <html lang="en">
 <head>
     <meta name="robots" content="noindex, nofollow">
-    
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Resume</title>
     <style>
-        body { margin: 0; padding: 0; font-family: sans-serif; }
-        .container { text-align: center; padding: 20px; }
-        iframe { border: none; margin-top: 10px; }
+        /* Removes all default spacing and grey borders */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Prevents double scrollbars */
+            background-color: white;
+        }
+
+        /* Makes the PDF fill the entire screen */
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h2>My Resume</h2>
-        
-        <iframe src="Resume.pdf" width="100%" height="800px">
-            <p>Your browser does not support iframes. 
-               <a href="Resume.pdf">Click here to view the PDF.</a>
-            </p>
-        </iframe>
-    </div>
+    <iframe src="Resume.pdf#view=FitH" frameborder="0">
+        <p>Your browser does not support PDFs. <a href="Resume.pdf">Download instead</a>.</p>
+    </iframe>
 
 </body>
 </html>
